@@ -55,34 +55,32 @@ const data = [
   }
 ]
 
-function cardDatas(data) {
-  return (
-    "<div class=\"card\">" + data.map(item =>
-      `<div class="card-blog">
-        <img src="images/${item.image}"/> 
-        <div class="container">
-          <div class="date-time">
-            <h> ${item.date} </h> 
-            <h> ${item.readingTime} </h> 
-          </div>
-          <div class="content-head">
-            <h> ${item.title} </h>
-          </div>
-          <div class="content-body">
-            <h> ${item.description} </h> 
-          </div>
-          <div> 
-            <hr /> 
-            <div class="card-foot">
-              <div class="clap"> 
-                <img class="icons" src="icons/clapping.svg" /> 
-                <h>${item.claps}</h>
-              </div>
-              <img class="icons" src="icons/heart-black.svg" />
+data.forEach((item) => {
+  const card =
+    `<div class="card-blog">
+      <img src="images/${item.image}"/> 
+      <div class="container">
+        <div class="date-time">
+          <h> ${item.date} </h> 
+          <h> ${item.readingTime} </h> 
+        </div>
+        <div class="content-head">
+          <h> ${item.title} </h>
+        </div>
+        <div class="content-body">
+          <h> ${item.description} </h> 
+        </div>
+        <div> 
+          <hr /> 
+          <div class="card-foot">
+            <div class="clap"> 
+              <img class="icons" src="icons/clapping.svg" /> 
+              <h>${item.claps}</h>
             </div>
+            <img class="icons" src="icons/heart-black.svg" />
           </div>
         </div>
-      </div>`).join('') +
-    "</div>"
-  );
-}
+      </div>
+    </div>`;
+  document.getElementById("cards-container").innerHTML += card;
+});

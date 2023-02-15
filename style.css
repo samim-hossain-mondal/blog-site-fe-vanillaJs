@@ -16,7 +16,7 @@ img {
     width: 100%;
 }
 
-.header {
+.header-left {
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -26,12 +26,12 @@ img {
     padding-bottom: 15px;
 }
 
-.header>a {
+.header-left>a {
     font-size: 30px;
     font-weight: 200;
 }
 
-.header-menu {
+.header-right {
     display: flex;
     flex-direction: row;
     align-items: space-between;
@@ -125,12 +125,6 @@ a:visited {
 
 .clap>h {
     padding: 5px;
-}
-
-.try {
-    margin-top: auto;
-    bottom: 0;
-    width: 100%;
 }
 
 .card-foot {
